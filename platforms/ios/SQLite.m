@@ -187,9 +187,9 @@ RCT_EXPORT_METHOD(open: (NSDictionary *) options success:(RCTResponseSenderBlock
               assetFilePath = [targetBundleDirPath stringByAppendingPathComponent: assetFilePath];
               RCTLog(@"Built path to pre-populated DB asset from app bundle subdirectory: %@",assetFilePath);
             } else {
-              NSURL * documentsDirUrl = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory
-                                                                        inDomains:NSUserDomainMask] lastObject];
-              assetFilePath = [documentsDirUrl.path stringByAppendingPathComponent:assetFilePath];
+              // NSURL * documentsDirUrl = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory
+              //                                                           inDomains:NSUserDomainMask] lastObject];
+              // assetFilePath = [documentsDirUrl.path stringByAppendingPathComponent:assetFilePath];
               RCTLog(@"Built path to pre-populated DB asset from app sandbox documents directory: %@",assetFilePath);
             }
           } @catch(NSException *ex){
